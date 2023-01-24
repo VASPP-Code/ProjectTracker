@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vaspp_user_roles",
+  "info": {
+    "singularName": "vaspp-user-role",
+    "pluralName": "vaspp-user-roles",
+    "displayName": "VASPP_User_Role",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user_role": {
+      "type": "string"
+    }
+  }
+}

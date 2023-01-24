@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vaspp_proj_payments",
+  "info": {
+    "singularName": "vaspp-proj-payment",
+    "pluralName": "vaspp-proj-payments",
+    "displayName": "VASPP_Proj_Payment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "project_pay_date": {
+      "type": "string"
+    },
+    "vaspp_milestone_codes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vaspp-milestone-code.vaspp-milestone-code"
+    }
+  }
+}

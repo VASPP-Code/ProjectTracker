@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vaspp_proj_types",
+  "info": {
+    "singularName": "vaspp-proj-type",
+    "pluralName": "vaspp-proj-types",
+    "displayName": "VASPP_Proj_type",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "project_type": {
+      "type": "string"
+    }
+  }
+}

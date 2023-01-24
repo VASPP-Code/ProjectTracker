@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vaspp_proj_tasks",
+  "info": {
+    "singularName": "vaspp-proj-task",
+    "pluralName": "vaspp-proj-tasks",
+    "displayName": "VASPP_Proj_task",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "project_task_desc": {
+      "type": "string"
+    },
+    "project_task_plannedhours": {
+      "type": "string"
+    },
+    "project_task_usedhours": {
+      "type": "string"
+    },
+    "vaspp_proj_delay_code": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vaspp-proj-delay-code.vaspp-proj-delay-code"
+    }
+  }
+}

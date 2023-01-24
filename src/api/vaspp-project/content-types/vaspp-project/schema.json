@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vaspp_projects",
+  "info": {
+    "singularName": "vaspp-project",
+    "pluralName": "vaspp-projects",
+    "displayName": "VASPP_Project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "project_name": {
+      "type": "string"
+    },
+    "project_duration": {
+      "type": "string"
+    },
+    "vaspp_milestone_codes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vaspp-milestone-code.vaspp-milestone-code"
+    },
+    "vaspp_proj_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vaspp-proj-type.vaspp-proj-type"
+    },
+    "vaspp_proj_tasks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vaspp-proj-task.vaspp-proj-task"
+    },
+    "vaspp_teams": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vaspp-team.vaspp-team"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vaspp_milestone_codes",
+  "info": {
+    "singularName": "vaspp-milestone-code",
+    "pluralName": "vaspp-milestone-codes",
+    "displayName": "VASPP_Milestone_Code",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "milestone_name": {
+      "type": "string"
+    },
+    "milestone_desc": {
+      "type": "text"
+    }
+  }
+}
