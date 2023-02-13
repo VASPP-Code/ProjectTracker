@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_task_extensions",
+  "info": {
+    "singularName": "project-task-extension",
+    "pluralName": "project-task-extensions",
+    "displayName": "project_task_extension"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "projectTaskExtension_reason": {
+      "type": "text"
+    },
+    "projectTaskExtension_addedTime": {
+      "type": "time"
+    }
+  }
+}

@@ -22,7 +22,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::employee-information.employee-information",
-      "inversedBy": "employee"
+      "mappedBy": "employee"
     },
     "employee_location": {
       "type": "relation",

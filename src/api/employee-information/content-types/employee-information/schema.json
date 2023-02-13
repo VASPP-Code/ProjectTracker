@@ -38,9 +38,6 @@
     "employeeInformation_position": {
       "type": "string"
     },
-    "employeeInformation_function": {
-      "type": "string"
-    },
     "employeeInformation_currentProjectTasks": {
       "type": "string"
     },

@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_informations",
+  "info": {
+    "singularName": "project-information",
+    "pluralName": "project-informations",
+    "displayName": "project_information"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "projectInformation_name": {
+      "type": "string"
+    },
+    "projectInformation_type": {
+      "type": "enumeration",
+      "enum": [
+        "projectInformation_type1",
+        "projectInformation_type2",
+        "projectInformation_type3"
+      ]
+    },
+    "projectInformation_description": {
+      "type": "richtext"
+    },
+    "projectInformation_startDate": {
+      "type": "date"
+    },
+    "projectInformation_expectedEndDate": {
+      "type": "date"
+    },
+    "projectInformation_status": {
+      "type": "enumeration",
+      "enum": [
+        "in progress",
+        "finished",
+        "cancelled"
+      ]
+    },
+    "projectInformation_payment": {
+      "type": "string"
+    },
+    "projectInformation_delayCode": {
+      "type": "integer"
+    },
+    "projectInformation_progress": {
+      "type": "integer"
+    },
+    "projectInformation_priority": {
+      "type": "boolean"
+    }
+  }
+}

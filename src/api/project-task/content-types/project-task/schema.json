@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_tasks",
+  "info": {
+    "singularName": "project-task",
+    "pluralName": "project-tasks",
+    "displayName": "project_task"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "projectTask_name": {
+      "type": "string"
+    },
+    "projectTask_description": {
+      "type": "string"
+    },
+    "projectTask_status": {
+      "type": "enumeration",
+      "enum": [
+        "was successfully completed",
+        "in progress"
+      ]
+    },
+    "projectTask_performedBy": {
+      "type": "string"
+    },
+    "projectTask_startDate": {
+      "type": "date"
+    },
+    "projectTask_estimatedTime": {
+      "type": "time"
+    }
+  }
+}
