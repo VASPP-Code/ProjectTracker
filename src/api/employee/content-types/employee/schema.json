@@ -41,6 +41,18 @@
       "relation": "oneToMany",
       "target": "api::employee-time-entry.employee-time-entry",
       "mappedBy": "employee"
+    },
+    "project_teams": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project-team.project-team",
+      "mappedBy": "employees"
+    },
+    "employee_role": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee-role.employee-role",
+      "inversedBy": "employee"
     }
   }
 }

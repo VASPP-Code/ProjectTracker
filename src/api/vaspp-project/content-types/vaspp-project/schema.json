@@ -28,11 +28,6 @@
       "relation": "oneToOne",
       "target": "api::vaspp-proj-type.vaspp-proj-type"
     },
-    "vaspp_proj_tasks": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::vaspp-proj-task.vaspp-proj-task"
-    },
     "vaspp_teams": {
       "type": "relation",
       "relation": "oneToMany",

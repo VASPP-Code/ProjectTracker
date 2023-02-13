@@ -31,9 +31,6 @@
     "projectTask_startDate": {
       "type": "date"
     },
-    "projectTask_estimatedTime": {
-      "type": "time"
-    },
     "project": {
       "type": "relation",
       "relation": "manyToOne",
@@ -48,6 +45,20 @@
     },
     "projectTask_ID": {
       "type": "uid"
+    },
+    "projectTask_plannedHours": {
+      "type": "time"
+    },
+    "projectTask_usedHours": {
+      "type": "time"
+    },
+    "projectTask_delayCode": {
+      "type": "enumeration",
+      "enum": [
+        "need more time",
+        "budget is too low",
+        "other"
+      ]
     }
   }
 }

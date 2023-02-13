@@ -62,11 +62,6 @@
       "target": "plugin::users-permissions.role",
       "inversedBy": "users",
       "configurable": false
-    },
-    "vaspp_user_role": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::vaspp-user-role.vaspp-user-role"
     }
   }
 }

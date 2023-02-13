@@ -33,7 +33,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::employee.employee",
-      "inversedBy": "employee_location"
+      "mappedBy": "employee_location"
     },
     "project": {
       "type": "relation",

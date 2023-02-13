@@ -4,7 +4,8 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "project"
+    "displayName": "project",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -37,6 +38,15 @@
       "relation": "oneToMany",
       "target": "api::project-task.project-task",
       "mappedBy": "project"
+    },
+    "testproject": {
+      "type": "string"
+    },
+    "project_teams": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project-team.project-team",
+      "mappedBy": "projects"
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "customer-contact-person",
     "pluralName": "customer-contact-people",
-    "displayName": "customer_contact_person"
+    "displayName": "customer_contact_person",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -25,6 +26,9 @@
       "relation": "manyToOne",
       "target": "api::customer.customer",
       "inversedBy": "customer_contact_person"
+    },
+    "customerContactPerson_functionalRole": {
+      "type": "string"
     }
   }
 }

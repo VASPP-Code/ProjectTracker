@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_teams",
+  "info": {
+    "singularName": "project-team",
+    "pluralName": "project-teams",
+    "displayName": "project_team",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "employees": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::employee.employee",
+      "inversedBy": "project_teams"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project.project",
+      "inversedBy": "project_teams"
+    },
+    "test_project_team": {
+      "type": "string"
+    }
+  }
+}

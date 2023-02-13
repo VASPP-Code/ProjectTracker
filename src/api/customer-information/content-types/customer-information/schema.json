@@ -41,6 +41,25 @@
     },
     "customerInformation_ID": {
       "type": "uid"
+    },
+    "customerInformation_documents": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "customerInformation_businessType": {
+      "type": "enumeration",
+      "enum": [
+        "businessType1",
+        "businessType2",
+        "businessType3"
+      ]
     }
   }
 }

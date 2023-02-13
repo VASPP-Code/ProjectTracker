@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "test": {
+    "testleave": {
       "type": "string"
     },
     "leave_ID": {
