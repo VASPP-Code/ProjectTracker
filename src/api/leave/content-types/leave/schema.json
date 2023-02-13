@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "leaves",
+  "info": {
+    "singularName": "leave",
+    "pluralName": "leaves",
+    "displayName": "leave",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "test": {
+      "type": "string"
+    },
+    "leave_ID": {
+      "type": "uid"
+    },
+    "leave_histories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::leave-history.leave-history",
+      "mappedBy": "leave"
+    },
+    "leave_requests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::leave-request.leave-request",
+      "mappedBy": "leave"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employee_bank_datas",
+  "info": {
+    "singularName": "employee-bank-data",
+    "pluralName": "employee-bank-datas",
+    "displayName": "employee_bank_data"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "employeeBankData_bankName": {
+      "type": "string"
+    },
+    "employeeBankData_IFCScode": {
+      "type": "integer"
+    },
+    "employeeBankData_bankAccountNumber": {
+      "type": "string"
+    },
+    "employeeBankData_universalAccountNumber": {
+      "type": "integer"
+    },
+    "employeeBankData_PFnominee": {
+      "type": "string"
+    },
+    "employeeBankData_nomineeAdress": {
+      "type": "string"
+    },
+    "employeeBankData_nomineeRelationship": {
+      "type": "string"
+    },
+    "employeeBankData_birthDate": {
+      "type": "date"
+    },
+    "employeeBankData_nomineeShare": {
+      "type": "integer"
+    },
+    "employee": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee.employee",
+      "inversedBy": "employee_bank_datum"
+    }
+  }
+}

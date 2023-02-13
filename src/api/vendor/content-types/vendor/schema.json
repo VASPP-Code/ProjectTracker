@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vendors",
+  "info": {
+    "singularName": "vendor",
+    "pluralName": "vendors",
+    "displayName": "vendor",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "test": {
+      "type": "string"
+    },
+    "vendor_ID": {
+      "type": "uid"
+    },
+    "vendor_contact_people": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vendor-contact-person.vendor-contact-person",
+      "mappedBy": "vendor"
+    },
+    "vendor_information": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vendor-information.vendor-information",
+      "mappedBy": "vendor"
+    },
+    "vendor_location": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vendor-location.vendor-location",
+      "mappedBy": "vendor"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vendor_locations",
+  "info": {
+    "singularName": "vendor-location",
+    "pluralName": "vendor-locations",
+    "displayName": "vendor_location",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "vendorLocation_name": {
+      "type": "string"
+    },
+    "vendorLocation_street": {
+      "type": "string"
+    },
+    "vendorLocation_postalCode": {
+      "type": "integer"
+    },
+    "vendorLocation_city": {
+      "type": "string"
+    },
+    "vendorLocation_state": {
+      "type": "string"
+    },
+    "vendorLocation_land": {
+      "type": "string"
+    },
+    "vendor": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vendor.vendor",
+      "inversedBy": "vendor_location"
+    },
+    "vendorLocation_ID": {
+      "type": "uid"
+    }
+  }
+}

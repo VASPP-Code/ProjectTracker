@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "leave_histories",
+  "info": {
+    "singularName": "leave-history",
+    "pluralName": "leave-histories",
+    "displayName": "leave_history",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "leaveHistory_leaveDaysPerYear": {
+      "type": "integer"
+    },
+    "leaveHistory_leaveDaysTakenThisYear": {
+      "type": "integer"
+    },
+    "leaveHistory_remainingDaysthisYear": {
+      "type": "integer"
+    },
+    "leaveHistory_lastLeaveRequestedOn": {
+      "type": "date"
+    },
+    "leave": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::leave.leave",
+      "inversedBy": "leave_histories"
+    },
+    "leaveHistory_ID": {
+      "type": "uid"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vendor_informations",
+  "info": {
+    "singularName": "vendor-information",
+    "pluralName": "vendor-informations",
+    "displayName": "vendor_information",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "vendorInformation_name": {
+      "type": "string"
+    },
+    "vendorInformation_description": {
+      "type": "richtext"
+    },
+    "vendorInformation_createDate": {
+      "type": "date"
+    },
+    "vendorInformation_createdBy": {
+      "type": "string"
+    },
+    "vendorInformation_modifyDate": {
+      "type": "date"
+    },
+    "vendorInformation_modifiedBy": {
+      "type": "string"
+    },
+    "vendorInformation_deleteDate": {
+      "type": "date"
+    },
+    "vendorInformation_deletedBy": {
+      "type": "string"
+    },
+    "vendorInformation_isArchived": {
+      "type": "boolean"
+    },
+    "vendor": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vendor.vendor",
+      "inversedBy": "vendor_information"
+    },
+    "vendorInformation_ID": {
+      "type": "uid"
+    }
+  }
+}

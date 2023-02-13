@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employee_time_entries",
+  "info": {
+    "singularName": "employee-time-entry",
+    "pluralName": "employee-time-entries",
+    "displayName": "employee_time_entry",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "employeeTimeEntry_startTime": {
+      "type": "datetime"
+    },
+    "employeeTimeEntry_endTime": {
+      "type": "datetime"
+    },
+    "employeeTimeEntry_taskDescription": {
+      "type": "string"
+    },
+    "employeeTimeEntry_dailyTotalTime": {
+      "type": "decimal"
+    },
+    "employeeTimeEntry_weeklyWorkingTime": {
+      "type": "decimal"
+    },
+    "employee": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::employee.employee",
+      "inversedBy": "employee_time_entries"
+    }
+  }
+}

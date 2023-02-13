@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employees",
+  "info": {
+    "singularName": "employee",
+    "pluralName": "employees",
+    "displayName": "employee",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "employeetest": {
+      "type": "string"
+    },
+    "employee_ID": {
+      "type": "uid"
+    },
+    "employee_information": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee-information.employee-information",
+      "inversedBy": "employee"
+    },
+    "employee_location": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee-location.employee-location",
+      "inversedBy": "employee"
+    },
+    "employee_bank_datum": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee-bank-data.employee-bank-data",
+      "inversedBy": "employee"
+    },
+    "employee_time_entries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::employee-time-entry.employee-time-entry",
+      "mappedBy": "employee"
+    }
+  }
+}

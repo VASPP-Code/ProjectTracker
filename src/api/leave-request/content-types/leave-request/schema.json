@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "leave_requests",
+  "info": {
+    "singularName": "leave-request",
+    "pluralName": "leave-requests",
+    "displayName": "leave_request",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "leaveRequest_appliedO": {
+      "type": "date"
+    },
+    "leaveRequest_leaveStartDate": {
+      "type": "date"
+    },
+    "leaveRequest_leaveEndDate": {
+      "type": "date"
+    },
+    "leaveRequest_leaveNumberOfDays": {
+      "type": "integer"
+    },
+    "leaveRequest_LeaveType": {
+      "type": "enumeration",
+      "enum": [
+        "unpaid leave",
+        "paid leave",
+        "sick leave "
+      ]
+    },
+    "leaveRequest_status": {
+      "type": "enumeration",
+      "enum": [
+        "in progress",
+        "rejected",
+        "accepted"
+      ]
+    },
+    "leave": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::leave.leave",
+      "inversedBy": "leave_requests"
+    },
+    "leaveRequest_ID": {
+      "type": "uid"
+    }
+  }
+}
