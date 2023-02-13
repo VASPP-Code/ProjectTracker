@@ -4,7 +4,8 @@
   "info": {
     "singularName": "project-task-extension",
     "pluralName": "project-task-extensions",
-    "displayName": "project_task_extension"
+    "displayName": "project_task_extension",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,6 +17,15 @@
     },
     "projectTaskExtension_addedTime": {
       "type": "time"
+    },
+    "project_task": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project-task.project-task",
+      "mappedBy": "project_task_extension"
+    },
+    "projectTaskExtension_ID": {
+      "type": "uid"
     }
   }
 }

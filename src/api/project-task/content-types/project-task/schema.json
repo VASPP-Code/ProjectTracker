@@ -4,7 +4,8 @@
   "info": {
     "singularName": "project-task",
     "pluralName": "project-tasks",
-    "displayName": "project_task"
+    "displayName": "project_task",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -32,6 +33,21 @@
     },
     "projectTask_estimatedTime": {
       "type": "time"
+    },
+    "project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "project_tasks"
+    },
+    "project_task_extension": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project-task-extension.project-task-extension",
+      "inversedBy": "project_task"
+    },
+    "projectTask_ID": {
+      "type": "uid"
     }
   }
 }

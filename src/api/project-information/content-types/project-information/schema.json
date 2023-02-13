@@ -4,7 +4,8 @@
   "info": {
     "singularName": "project-information",
     "pluralName": "project-informations",
-    "displayName": "project_information"
+    "displayName": "project_information",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -50,6 +51,15 @@
     },
     "projectInformation_priority": {
       "type": "boolean"
+    },
+    "project": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project.project",
+      "inversedBy": "project_information"
+    },
+    "projectInformation_ID": {
+      "type": "uid"
     }
   }
 }

@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "project"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "project_ID": {
+      "type": "uid"
+    },
+    "project_budget": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project-budget.project-budget",
+      "mappedBy": "project"
+    },
+    "project_information": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project-information.project-information",
+      "mappedBy": "project"
+    },
+    "employee_locations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::employee-location.employee-location",
+      "mappedBy": "project"
+    },
+    "project_tasks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-task.project-task",
+      "mappedBy": "project"
+    }
+  }
+}

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "project-budget",
     "pluralName": "project-budgets",
-    "displayName": "project_budget"
+    "displayName": "project_budget",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,6 +23,15 @@
     },
     "projectBudget_alreadyUsedBudget": {
       "type": "decimal"
+    },
+    "project": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project.project",
+      "inversedBy": "project_budget"
+    },
+    "projectBudget_ID": {
+      "type": "uid"
     }
   }
 }

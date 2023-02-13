@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customer_contact_people",
+  "info": {
+    "singularName": "customer-contact-person",
+    "pluralName": "customer-contact-people",
+    "displayName": "customer_contact_person"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "customerContactPerson_name": {
+      "type": "string"
+    },
+    "customerContactPerson_email": {
+      "type": "email"
+    },
+    "customerContactPerson_phone": {
+      "type": "integer"
+    },
+    "customer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::customer.customer",
+      "inversedBy": "customer_contact_person"
+    }
+  }
+}

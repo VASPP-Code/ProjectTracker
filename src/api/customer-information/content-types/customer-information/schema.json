@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customer_informations",
+  "info": {
+    "singularName": "customer-information",
+    "pluralName": "customer-informations",
+    "displayName": "customer_information",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "customerInformation_name": {
+      "type": "string"
+    },
+    "customerInformation_description": {
+      "type": "richtext"
+    },
+    "customerInformation_createDate": {
+      "type": "date"
+    },
+    "customerInformation_createdBy": {
+      "type": "string"
+    },
+    "customerInformation_modifyDate": {
+      "type": "date"
+    },
+    "customerInformation_modifiedBy": {
+      "type": "string"
+    },
+    "customerInformation_isArchived": {
+      "type": "boolean"
+    },
+    "customer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer.customer",
+      "inversedBy": "customer_information"
+    },
+    "customerInformation_ID": {
+      "type": "uid"
+    }
+  }
+}
