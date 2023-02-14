@@ -12,26 +12,38 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "employeeTimeEntry_startTime": {
-      "type": "datetime"
-    },
-    "employeeTimeEntry_endTime": {
-      "type": "datetime"
-    },
-    "employeeTimeEntry_taskDescription": {
-      "type": "string"
-    },
-    "employeeTimeEntry_dailyTotalTime": {
-      "type": "decimal"
-    },
-    "employeeTimeEntry_weeklyWorkingTime": {
-      "type": "decimal"
-    },
     "employee": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::employee.employee",
       "inversedBy": "employee_time_entries"
+    },
+    "employeeTimeEntry_projectWorkingTimeDate": {
+      "type": "date"
+    },
+    "employeeWorkingTime_projectWorkingTimeAssigned": {
+      "type": "time"
+    },
+    "employeeWorkingTime_projectWorkingTimeTaken": {
+      "type": "time"
+    },
+    "employeeWorkingTime_weeklyWorkingTime": {
+      "type": "time"
+    },
+    "employeeWorkingTime_timeSheetSubmitted": {
+      "type": "boolean"
+    },
+    "employeeWorkingTime_weeklyWorkingTimeHours": {
+      "type": "time"
+    },
+    "employeeWorkingTime_WeeklyWorkingTimeDates": {
+      "type": "date"
+    },
+    "employee_time_entry_histories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::employee-time-entry-history.employee-time-entry-history",
+      "mappedBy": "employee_time_entry"
     }
   }
 }

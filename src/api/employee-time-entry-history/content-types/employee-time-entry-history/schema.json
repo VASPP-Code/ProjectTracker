@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employee_time_entry_histories",
+  "info": {
+    "singularName": "employee-time-entry-history",
+    "pluralName": "employee-time-entry-histories",
+    "displayName": "employee_time_entry_history",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "employeeTimeEntryHistory_weeklyWorkingTime": {
+      "type": "time"
+    },
+    "employeeTimeEntryHistory_monthlyWorkingTime": {
+      "type": "time"
+    },
+    "employeeTimeEntryHistory_timeSheetSubmitted": {
+      "type": "boolean"
+    },
+    "employeeTimeEntryHistory_timeSheetDate": {
+      "type": "date"
+    },
+    "employeeTimeEntryHistory_timeSheetHours": {
+      "type": "time"
+    },
+    "employee_time_entry": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::employee-time-entry.employee-time-entry",
+      "inversedBy": "employee_time_entry_histories"
+    }
+  }
+}

@@ -31,12 +31,6 @@
     "projectTask_startDate": {
       "type": "date"
     },
-    "project": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::project.project",
-      "inversedBy": "project_tasks"
-    },
     "project_task_extension": {
       "type": "relation",
       "relation": "oneToOne",
@@ -59,6 +53,12 @@
         "budget is too low",
         "other"
       ]
+    },
+    "project_milestone": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project-milestone.project-milestone",
+      "inversedBy": "project_tasks"
     }
   }
 }

@@ -34,12 +34,6 @@
       "relation": "oneToOne",
       "target": "api::employee.employee",
       "mappedBy": "employee_location"
-    },
-    "project": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::project.project",
-      "inversedBy": "employee_locations"
     }
   }
 }

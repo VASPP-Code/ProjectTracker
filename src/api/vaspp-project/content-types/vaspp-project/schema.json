@@ -18,11 +18,6 @@
     "project_duration": {
       "type": "string"
     },
-    "vaspp_milestone_codes": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::vaspp-milestone-code.vaspp-milestone-code"
-    },
     "vaspp_proj_type": {
       "type": "relation",
       "relation": "oneToOne",

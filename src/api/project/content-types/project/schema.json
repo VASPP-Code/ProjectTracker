@@ -27,18 +27,6 @@
       "target": "api::project-information.project-information",
       "mappedBy": "project"
     },
-    "employee_locations": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::employee-location.employee-location",
-      "mappedBy": "project"
-    },
-    "project_tasks": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::project-task.project-task",
-      "mappedBy": "project"
-    },
     "testproject": {
       "type": "string"
     },
@@ -47,6 +35,12 @@
       "relation": "manyToMany",
       "target": "api::project-team.project-team",
       "mappedBy": "projects"
+    },
+    "project_milestones": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-milestone.project-milestone",
+      "mappedBy": "project"
     }
   }
 }

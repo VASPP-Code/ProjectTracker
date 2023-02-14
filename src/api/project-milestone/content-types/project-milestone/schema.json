@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_milestones",
+  "info": {
+    "singularName": "project-milestone",
+    "pluralName": "project-milestones",
+    "displayName": "project_milestone",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "projectMilestone_name": {
+      "type": "string"
+    },
+    "projectMilestone_description": {
+      "type": "richtext"
+    },
+    "projectMilestone_ID": {
+      "type": "uid"
+    },
+    "project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "project_milestones"
+    },
+    "project_tasks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-task.project-task",
+      "mappedBy": "project_milestone"
+    }
+  }
+}

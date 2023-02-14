@@ -14,11 +14,6 @@
   "attributes": {
     "project_pay_date": {
       "type": "string"
-    },
-    "vaspp_milestone_codes": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::vaspp-milestone-code.vaspp-milestone-code"
     }
   }
 }
