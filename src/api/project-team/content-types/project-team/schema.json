@@ -26,6 +26,15 @@
     },
     "test_project_team": {
       "type": "string"
+    },
+    "projectTeam_functionalRole": {
+      "type": "enumeration",
+      "enum": [
+        "FunctionalRole1",
+        "FunctionalRole2",
+        "FunctionalRole3",
+        "FunctionalRole4"
+      ]
     }
   }
 }
