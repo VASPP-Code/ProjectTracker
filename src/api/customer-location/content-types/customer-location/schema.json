@@ -32,11 +32,11 @@
     "customerLocation_land": {
       "type": "string"
     },
-    "customer": {
+    "customer_information": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::customer.customer",
-      "mappedBy": "customer_location"
+      "relation": "manyToOne",
+      "target": "api::customer-information.customer-information",
+      "inversedBy": "customer_locations"
     }
   }
 }

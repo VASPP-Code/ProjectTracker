@@ -29,10 +29,10 @@
     "employeeLocation_ID": {
       "type": "uid"
     },
-    "employee": {
+    "user": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "api::employee.employee",
+      "target": "plugin::users-permissions.user",
       "mappedBy": "employee_location"
     }
   }

@@ -33,12 +33,6 @@
     "customerInformation_isArchived": {
       "type": "boolean"
     },
-    "customer": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::customer.customer",
-      "inversedBy": "customer_information"
-    },
     "customerInformation_ID": {
       "type": "uid"
     },
@@ -60,6 +54,24 @@
         "businessType2",
         "businessType3"
       ]
+    },
+    "customer_locations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::customer-location.customer-location",
+      "mappedBy": "customer_information"
+    },
+    "customerInformation_contactPersonName": {
+      "type": "string"
+    },
+    "customerInformation_contactPersonEmail": {
+      "type": "email"
+    },
+    "customerInformation_contactPersonPhone": {
+      "type": "integer"
+    },
+    "customerInformation_contactPersonFunctionalRole": {
+      "type": "string"
     }
   }
 }

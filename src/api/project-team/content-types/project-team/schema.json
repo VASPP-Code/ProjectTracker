@@ -12,21 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "employees": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::employee.employee",
-      "inversedBy": "project_teams"
-    },
-    "projects": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::project.project",
-      "inversedBy": "project_teams"
-    },
-    "test_project_team": {
-      "type": "string"
-    },
     "projectTeam_functionalRole": {
       "type": "enumeration",
       "enum": [
@@ -35,6 +20,18 @@
         "FunctionalRole3",
         "FunctionalRole4"
       ]
+    },
+    "project_information": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project-information.project-information",
+      "inversedBy": "project_teams"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "project_teams"
     }
   }
 }

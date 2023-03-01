@@ -30,14 +30,14 @@
     "vendorLocation_land": {
       "type": "string"
     },
-    "vendor": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::vendor.vendor",
-      "inversedBy": "vendor_location"
-    },
     "vendorLocation_ID": {
       "type": "uid"
+    },
+    "vendor_information": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::vendor-information.vendor-information",
+      "inversedBy": "vendor_locations"
     }
   }
 }

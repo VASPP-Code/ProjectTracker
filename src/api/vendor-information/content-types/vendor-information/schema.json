@@ -39,14 +39,23 @@
     "vendorInformation_isArchived": {
       "type": "boolean"
     },
-    "vendor": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::vendor.vendor",
-      "inversedBy": "vendor_information"
-    },
     "vendorInformation_ID": {
       "type": "uid"
+    },
+    "vendorInformation_contactPersonName": {
+      "type": "string"
+    },
+    "vendorInformation_contactPersonEmail": {
+      "type": "email"
+    },
+    "vendorInformation_contactPersonPhone": {
+      "type": "integer"
+    },
+    "vendor_locations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vendor-location.vendor-location",
+      "mappedBy": "vendor_information"
     }
   }
 }

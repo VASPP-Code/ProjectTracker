@@ -52,14 +52,38 @@
     "projectInformation_priority": {
       "type": "boolean"
     },
-    "project": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::project.project",
-      "inversedBy": "project_information"
-    },
     "projectInformation_ID": {
       "type": "uid"
+    },
+    "project_budgets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-budget.project-budget",
+      "mappedBy": "project_information"
+    },
+    "project_teams": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-team.project-team",
+      "mappedBy": "project_information"
+    },
+    "project_milestones": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-milestone.project-milestone",
+      "mappedBy": "project_information"
+    },
+    "project_tasks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-task.project-task",
+      "mappedBy": "project_information"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "project_informations"
     }
   }
 }

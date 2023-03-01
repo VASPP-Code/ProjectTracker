@@ -24,14 +24,14 @@
     "leaveHistory_lastLeaveRequestedOn": {
       "type": "date"
     },
-    "leave": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::leave.leave",
-      "inversedBy": "leave_histories"
-    },
     "leaveHistory_ID": {
       "type": "uid"
+    },
+    "leave_request": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::leave-request.leave-request",
+      "inversedBy": "leave_histories"
     }
   }
 }

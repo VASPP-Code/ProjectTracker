@@ -32,6 +32,12 @@
       "relation": "manyToOne",
       "target": "api::employee-time-entry.employee-time-entry",
       "inversedBy": "employee_time_entry_histories"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "employee_time_entry_histories"
     }
   }
 }

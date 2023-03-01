@@ -16,12 +16,6 @@
     },
     "employeeRole_ID": {
       "type": "uid"
-    },
-    "employee": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::employee.employee",
-      "inversedBy": "employee_role"
     }
   }
 }

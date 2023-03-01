@@ -31,12 +31,6 @@
     "projectTask_startDate": {
       "type": "date"
     },
-    "project_task_extension": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::project-task-extension.project-task-extension",
-      "inversedBy": "project_task"
-    },
     "projectTask_ID": {
       "type": "uid"
     },
@@ -58,6 +52,12 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::project-milestone.project-milestone",
+      "inversedBy": "project_tasks"
+    },
+    "project_information": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project-information.project-information",
       "inversedBy": "project_tasks"
     }
   }

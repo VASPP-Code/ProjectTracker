@@ -62,6 +62,90 @@
       "target": "plugin::users-permissions.role",
       "inversedBy": "users",
       "configurable": false
+    },
+    "employee_bank_data": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee-bank-data.employee-bank-data",
+      "inversedBy": "user"
+    },
+    "employee_location": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee-location.employee-location",
+      "inversedBy": "user"
+    },
+    "employee_role": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employee-role.employee-role"
+    },
+    "employee_time_entries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::employee-time-entry.employee-time-entry",
+      "mappedBy": "user"
+    },
+    "employee_time_entry_histories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::employee-time-entry-history.employee-time-entry-history",
+      "mappedBy": "user"
+    },
+    "user_firstName": {
+      "type": "string"
+    },
+    "user_lastName": {
+      "type": "string"
+    },
+    "user_gender": {
+      "type": "enumeration",
+      "enum": [
+        "w",
+        "d",
+        "m"
+      ]
+    },
+    "user_phone": {
+      "type": "integer"
+    },
+    "user_position": {
+      "type": "string"
+    },
+    "user_currentProjectTasks": {
+      "type": "string"
+    },
+    "user_createDate": {
+      "type": "date"
+    },
+    "user_createdBy": {
+      "type": "string"
+    },
+    "user_modifyDate": {
+      "type": "date"
+    },
+    "user_modifyBy": {
+      "type": "string"
+    },
+    "User_ID": {
+      "type": "uid"
+    },
+    "project_informations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-information.project-information",
+      "mappedBy": "user"
+    },
+    "project_teams": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-team.project-team",
+      "mappedBy": "user"
+    },
+    "project_task": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project-task.project-task"
     }
   }
 }

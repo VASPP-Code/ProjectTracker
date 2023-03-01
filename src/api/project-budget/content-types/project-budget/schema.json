@@ -24,14 +24,14 @@
     "projectBudget_alreadyUsedBudget": {
       "type": "decimal"
     },
-    "project": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::project.project",
-      "inversedBy": "project_budget"
-    },
     "projectBudget_ID": {
       "type": "uid"
+    },
+    "project_information": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project-information.project-information",
+      "inversedBy": "project_budgets"
     }
   }
 }

@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "employee": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::employee.employee",
-      "inversedBy": "employee_time_entries"
-    },
     "employeeTimeEntry_projectWorkingTimeDate": {
       "type": "date"
     },
@@ -44,6 +38,12 @@
       "relation": "oneToMany",
       "target": "api::employee-time-entry-history.employee-time-entry-history",
       "mappedBy": "employee_time_entry"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "employee_time_entries"
     }
   }
 }

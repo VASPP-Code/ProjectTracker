@@ -21,17 +21,17 @@
     "projectMilestone_ID": {
       "type": "uid"
     },
-    "project": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::project.project",
-      "inversedBy": "project_milestones"
-    },
     "project_tasks": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::project-task.project-task",
       "mappedBy": "project_milestone"
+    },
+    "project_information": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project-information.project-information",
+      "inversedBy": "project_milestones"
     }
   }
 }
