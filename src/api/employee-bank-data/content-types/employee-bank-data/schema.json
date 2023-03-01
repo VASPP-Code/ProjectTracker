@@ -4,7 +4,8 @@
   "info": {
     "singularName": "employee-bank-data",
     "pluralName": "employee-bank-datas",
-    "displayName": "employee_bank_data"
+    "displayName": "employee_bank_data",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -43,6 +44,9 @@
       "relation": "oneToOne",
       "target": "api::employee.employee",
       "mappedBy": "employee_bank_datum"
+    },
+    "Test": {
+      "type": "string"
     }
   }
 }
