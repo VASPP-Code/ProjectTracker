@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usr_bankdatas",
+  "info": {
+    "singularName": "usr-bankdata",
+    "pluralName": "usr-bankdatas",
+    "displayName": "usr_bankdata",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "usr_bankName": {
+      "type": "string"
+    },
+    "usr_IFCScode": {
+      "type": "integer"
+    },
+    "usr_bankAccNo": {
+      "type": "string"
+    },
+    "usr_UAN": {
+      "type": "integer"
+    },
+    "usr_PFnominee": {
+      "type": "string"
+    },
+    "usr_nomineeAdress": {
+      "type": "string"
+    },
+    "usr_nomineeRelationship": {
+      "type": "string"
+    },
+    "usr_nomineeDOB": {
+      "type": "date"
+    },
+    "usr_nomineeShare": {
+      "type": "integer"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "usr_bankdatum"
+    }
+  }
+}

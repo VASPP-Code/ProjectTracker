@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usr_roles",
+  "info": {
+    "singularName": "usr-role",
+    "pluralName": "usr-roles",
+    "displayName": "usr_role",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "usr_functionalRole": {
+      "type": "string"
+    },
+    "usr_solutionRole": {
+      "type": "string"
+    },
+    "usr_role": {
+      "type": "enumeration",
+      "enum": [
+        "Manager",
+        "Admin",
+        "Approver",
+        "Employee (User)"
+      ]
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "usr_role"
+    }
+  }
+}

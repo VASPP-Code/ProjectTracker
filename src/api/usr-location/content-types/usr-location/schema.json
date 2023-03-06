@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usr_locations",
+  "info": {
+    "singularName": "usr-location",
+    "pluralName": "usr-locations",
+    "displayName": "usr_location",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "usr_street": {
+      "type": "string"
+    },
+    "usr_houseNumber": {
+      "type": "string"
+    },
+    "usr_postal": {
+      "type": "string"
+    },
+    "usr_city": {
+      "type": "string"
+    },
+    "usr_region": {
+      "type": "string"
+    },
+    "usr_land": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "usr_location"
+    }
+  }
+}

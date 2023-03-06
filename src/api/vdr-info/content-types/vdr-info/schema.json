@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vdr_infos",
+  "info": {
+    "singularName": "vdr-info",
+    "pluralName": "vdr-infos",
+    "displayName": "vdr_info",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "vdr_name": {
+      "type": "string"
+    },
+    "vdr_description": {
+      "type": "richtext"
+    },
+    "vdr_archived": {
+      "type": "boolean"
+    },
+    "vdr_modfDate": {
+      "type": "date"
+    },
+    "vdr_modfBy": {
+      "type": "string"
+    },
+    "vrd_businessTyp": {
+      "type": "enumeration",
+      "enum": [
+        "    Manufacturer",
+        "    Distributor",
+        "    Wholesaler",
+        "    Retailer",
+        "    Service provider",
+        "    Freelancer",
+        "    Contractor",
+        "    Supplier",
+        "    Producer",
+        "    Importer/exporter"
+      ]
+    },
+    "vdr_location": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vdr-location.vdr-location",
+      "inversedBy": "vdr_info"
+    },
+    "vdr_contPersName": {
+      "type": "string"
+    },
+    "vdr_contPersEmail": {
+      "type": "email"
+    },
+    "vdr_contPersPhone": {
+      "type": "integer"
+    },
+    "vrd_media": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "prj_infos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::prj-info.prj-info",
+      "mappedBy": "vdr_infos"
+    }
+  }
+}

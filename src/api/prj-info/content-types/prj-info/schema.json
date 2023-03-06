@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prj_infos",
+  "info": {
+    "singularName": "prj-info",
+    "pluralName": "prj-infos",
+    "displayName": "prj_info",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "prj_id": {
+      "type": "uid"
+    },
+    "prj_id_name": {
+      "type": "string"
+    },
+    "prj_description": {
+      "type": "richtext"
+    },
+    "prj_effort": {
+      "type": "integer"
+    },
+    "prj_progress": {
+      "type": "integer"
+    },
+    "prj_priority": {
+      "type": "enumeration",
+      "enum": [
+        "    Critical",
+        "    High",
+        "    Medium",
+        "    Low",
+        "    Routine",
+        "    Urgent",
+        "    Important",
+        "    Essential",
+        "    Non-essential",
+        "    Optional"
+      ]
+    },
+    "prj_teams": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::prj-team.prj-team",
+      "inversedBy": "prj_infos"
+    },
+    "usr_timeentry": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::usr-timeentry.usr-timeentry",
+      "inversedBy": "prj_infos"
+    },
+    "vdr_infos": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::vdr-info.vdr-info",
+      "inversedBy": "prj_infos"
+    }
+  }
+}

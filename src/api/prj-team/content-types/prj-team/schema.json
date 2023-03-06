@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prj_teams",
+  "info": {
+    "singularName": "prj-team",
+    "pluralName": "prj-teams",
+    "displayName": "prj_team",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "prjTeam_ID": {
+      "type": "uid"
+    },
+    "prj_infos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::prj-info.prj-info",
+      "mappedBy": "prj_teams"
+    },
+    "prj_mlsts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::prj-mlst.prj-mlst",
+      "mappedBy": "prj_team"
+    },
+    "cus_infos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cus-info.cus-info",
+      "mappedBy": "prj_team"
+    },
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "prj_team"
+    }
+  }
+}

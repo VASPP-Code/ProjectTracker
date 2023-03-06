@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vdr_locations",
+  "info": {
+    "singularName": "vdr-location",
+    "pluralName": "vdr-locations",
+    "displayName": "vdr_location",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "vdr_street": {
+      "type": "string"
+    },
+    "vdr_houseNumber": {
+      "type": "string"
+    },
+    "vdr_postal": {
+      "type": "string"
+    },
+    "vdr_city": {
+      "type": "string"
+    },
+    "vdr_region": {
+      "type": "string"
+    },
+    "vdr_land": {
+      "type": "string"
+    },
+    "vdr_info": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vdr-info.vdr-info",
+      "mappedBy": "vdr_location"
+    }
+  }
+}

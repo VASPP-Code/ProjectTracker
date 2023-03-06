@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cus_locations",
+  "info": {
+    "singularName": "cus-location",
+    "pluralName": "cus-locations",
+    "displayName": "cus_location",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cus_street": {
+      "type": "string"
+    },
+    "cus_houseNumber": {
+      "type": "string"
+    },
+    "cus_postal": {
+      "type": "string"
+    },
+    "cus_city": {
+      "type": "string"
+    },
+    "cus_region": {
+      "type": "string"
+    },
+    "cus_land": {
+      "type": "string"
+    },
+    "cus_info": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cus-info.cus-info",
+      "mappedBy": "cus_location"
+    }
+  }
+}
