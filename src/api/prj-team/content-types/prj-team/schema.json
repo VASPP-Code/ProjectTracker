@@ -38,6 +38,12 @@
       "relation": "oneToMany",
       "target": "plugin::users-permissions.user",
       "mappedBy": "prj_team"
+    },
+    "vdr_info": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vdr-info.vdr-info",
+      "mappedBy": "prj_team"
     }
   }
 }

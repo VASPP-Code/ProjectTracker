@@ -132,6 +132,35 @@
       "relation": "oneToOne",
       "target": "api::lve-info.lve-info",
       "mappedBy": "users_permissions_user"
+    },
+    "prj_info": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::prj-info.prj-info",
+      "mappedBy": "users_permissions_user"
+    },
+    "usr_department": {
+      "type": "enumeration",
+      "enum": [
+        "    Accounting",
+        "    Human Resources",
+        "    Marketing",
+        "    Sales",
+        "    Customer Service",
+        "    Information Technology (IT)",
+        "    Research and Development (R&D)",
+        "    Operations",
+        "    Legal",
+        "    Administration",
+        "    Finance",
+        "    Production."
+      ]
+    },
+    "usr_emergencyContName": {
+      "type": "string"
+    },
+    "usr_emergencyContPhone": {
+      "type": "integer"
     }
   }
 }

@@ -83,6 +83,18 @@
     },
     "cus_contPersPhone": {
       "type": "integer"
+    },
+    "prj_info": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::prj-info.prj-info",
+      "mappedBy": "cus_info"
+    },
+    "vdr_info": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::vdr-info.vdr-info",
+      "inversedBy": "cus_infos"
     }
   }
 }

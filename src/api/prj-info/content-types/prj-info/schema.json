@@ -59,6 +59,44 @@
       "relation": "manyToOne",
       "target": "api::vdr-info.vdr-info",
       "inversedBy": "prj_infos"
+    },
+    "prj_startDate": {
+      "type": "date"
+    },
+    "prj_endDate": {
+      "type": "date"
+    },
+    "prj_status": {
+      "type": "enumeration",
+      "enum": [
+        "    Not Started",
+        "    In Progress",
+        "    On Hold",
+        "    Cancelled",
+        "    Completed",
+        "    Behind Schedule",
+        "    On Budget",
+        "    Pending Approval",
+        "    In Review"
+      ]
+    },
+    "cus_info": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cus-info.cus-info",
+      "inversedBy": "prj_info"
+    },
+    "cus_location": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cus-location.cus-location",
+      "inversedBy": "prj_info"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "prj_info"
     }
   }
 }

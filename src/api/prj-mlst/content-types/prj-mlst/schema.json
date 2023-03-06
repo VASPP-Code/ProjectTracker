@@ -27,14 +27,15 @@
     "prjmlst_taskStatus": {
       "type": "enumeration",
       "enum": [
-        "    Not Started",
-        "    In Progress",
-        "    On Hold",
-        "    Waiting for Approval",
-        "    Completed",
-        "    Cancelled",
-        "    Scheduled",
-        "    Pending"
+        "New",
+        "Not Started",
+        "In Progress",
+        "On Hold",
+        "Waiting for Approval",
+        "Completed",
+        "Cancelled",
+        "Scheduled",
+        "Pending"
       ]
     },
     "prjmlst_startDate": {
@@ -54,6 +55,9 @@
       "relation": "manyToOne",
       "target": "api::usr-timeentry.usr-timeentry",
       "inversedBy": "prj_mlsts"
+    },
+    "prjmlst_effort": {
+      "type": "integer"
     }
   }
 }

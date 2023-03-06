@@ -35,6 +35,18 @@
       "relation": "oneToOne",
       "target": "api::cus-info.cus-info",
       "mappedBy": "cus_location"
+    },
+    "prj_info": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::prj-info.prj-info",
+      "mappedBy": "cus_location"
+    },
+    "vdr_info": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::vdr-info.vdr-info",
+      "inversedBy": "cus_locations"
     }
   }
 }

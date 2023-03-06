@@ -43,7 +43,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user",
-      "inversedBy": "usr_bankdatum"
+      "mappedBy": "usr_bankdatum"
     }
   }
 }

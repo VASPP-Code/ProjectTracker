@@ -18,20 +18,47 @@
     "usr_solutionRole": {
       "type": "string"
     },
-    "usr_role": {
-      "type": "enumeration",
-      "enum": [
-        "Manager",
-        "Admin",
-        "Approver",
-        "Employee (User)"
-      ]
-    },
     "user": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user",
       "mappedBy": "usr_role"
+    },
+    "usr_manageVdr": {
+      "type": "enumeration",
+      "enum": [
+        "Create",
+        "Read",
+        "Update",
+        "Delete"
+      ]
+    },
+    "usr_manageCus": {
+      "type": "enumeration",
+      "enum": [
+        "Create",
+        "Read",
+        "Update",
+        "Delete"
+      ]
+    },
+    "usr_manageMedia": {
+      "type": "enumeration",
+      "enum": [
+        "Create",
+        "Read",
+        "Update",
+        "Delete"
+      ]
+    },
+    "usr_managePrj": {
+      "type": "enumeration",
+      "enum": [
+        "Create",
+        "Read",
+        "Update",
+        "Delete"
+      ]
     }
   }
 }
