@@ -4,46 +4,45 @@
   "info": {
     "singularName": "usr-bankdata",
     "pluralName": "usr-bankdatas",
-    "displayName": "usr_bankdata",
+    "displayName": "PBankData",
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "usr_bankName": {
+    "bankName": {
+      "type": "string",
+      "required": true
+    },
+    "IFCScode": {
+      "type": "integer",
+      "required": true
+    },
+    "bankAccNo": {
+      "type": "string",
+      "required": true
+    },
+    "uan": {
+      "type": "integer",
+      "required": true
+    },
+    "PFnominee": {
+      "type": "string",
+      "required": true
+    },
+    "nomineeAdress": {
       "type": "string"
     },
-    "usr_IFCScode": {
-      "type": "integer"
-    },
-    "usr_bankAccNo": {
+    "nomineeRelationship": {
       "type": "string"
     },
-    "usr_UAN": {
-      "type": "integer"
-    },
-    "usr_PFnominee": {
-      "type": "string"
-    },
-    "usr_nomineeAdress": {
-      "type": "string"
-    },
-    "usr_nomineeRelationship": {
-      "type": "string"
-    },
-    "usr_nomineeDOB": {
+    "nomineeDOB": {
       "type": "date"
     },
-    "usr_nomineeShare": {
+    "nomineeShare": {
       "type": "integer"
-    },
-    "users_permissions_user": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user",
-      "mappedBy": "usr_bankdatum"
     }
   }
 }

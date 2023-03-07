@@ -18,12 +18,6 @@
     "usr_solutionRole": {
       "type": "string"
     },
-    "user": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user",
-      "mappedBy": "usr_role"
-    },
     "usr_manageVdr": {
       "type": "enumeration",
       "enum": [

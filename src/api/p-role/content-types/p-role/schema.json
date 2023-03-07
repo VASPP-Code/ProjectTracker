@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "p_roles",
+  "info": {
+    "singularName": "p-role",
+    "pluralName": "p-roles",
+    "displayName": "PRole"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Solution",
+        "Functional"
+      ],
+      "required": true
+    }
+  }
+}

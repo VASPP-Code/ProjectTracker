@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "p_leaves",
+  "info": {
+    "singularName": "p-leave",
+    "pluralName": "p-leaves",
+    "displayName": "PLeave"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "startDate": {
+      "type": "date",
+      "required": true
+    },
+    "endDate": {
+      "type": "date",
+      "required": true
+    },
+    "NoOfDays": {
+      "type": "integer",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Sick Leave",
+        "Paid Leave",
+        "Unpaid Leave"
+      ],
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Requested",
+        "Approved",
+        "Rejected",
+        "Cancelled"
+      ],
+      "required": true,
+      "default": "Requested"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "p_leaves"
+    }
+  }
+}

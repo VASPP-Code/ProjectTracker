@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "p_tasks",
+  "info": {
+    "singularName": "p-task",
+    "pluralName": "p-tasks",
+    "displayName": "PTask"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "priority": {
+      "type": "enumeration",
+      "enum": [
+        "Critical",
+        "High",
+        "Moderate",
+        "Low"
+      ],
+      "default": "Low",
+      "required": false
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "New",
+        "In-Progress",
+        "Completed"
+      ],
+      "default": "New"
+    },
+    "p_project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::p-project.p-project",
+      "inversedBy": "p_tasks"
+    },
+    "p_milestone": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::p-milestone.p-milestone",
+      "inversedBy": "p_tasks"
+    }
+  }
+}

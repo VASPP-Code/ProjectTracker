@@ -1,0 +1,96 @@
+{
+  "kind": "collectionType",
+  "collectionName": "p_customers",
+  "info": {
+    "singularName": "p-customer",
+    "pluralName": "p-customers",
+    "displayName": "PCustomer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "businessType": {
+      "type": "enumeration",
+      "enum": [
+        "IT"
+      ]
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "text",
+      "required": true
+    },
+    "zipCode": {
+      "type": "integer",
+      "required": true
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    },
+    "region": {
+      "type": "string",
+      "required": false
+    },
+    "documents": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "p_projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::p-project.p-project",
+      "mappedBy": "p_customer"
+    },
+    "cpFirstName": {
+      "type": "string",
+      "required": true
+    },
+    "cpMiddleName": {
+      "type": "string",
+      "required": false,
+      "unique": false
+    },
+    "cpLastName": {
+      "type": "string",
+      "required": false
+    },
+    "cpPhone": {
+      "type": "string",
+      "required": true
+    },
+    "cpDesignation": {
+      "type": "string"
+    },
+    "cpEmail": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

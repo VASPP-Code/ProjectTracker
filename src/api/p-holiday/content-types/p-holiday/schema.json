@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "p_holidays",
+  "info": {
+    "singularName": "p-holiday",
+    "pluralName": "p-holidays",
+    "displayName": "PHoliday"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "year": {
+      "type": "integer",
+      "required": true
+    },
+    "reason": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

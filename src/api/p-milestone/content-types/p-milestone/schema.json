@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "p_milestones",
+  "info": {
+    "singularName": "p-milestone",
+    "pluralName": "p-milestones",
+    "displayName": "PMilestone"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "New",
+        "In-Progress",
+        "Completed"
+      ],
+      "default": "New",
+      "required": false
+    },
+    "p_project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::p-project.p-project",
+      "inversedBy": "p_milestones"
+    },
+    "p_tasks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::p-task.p-task",
+      "mappedBy": "p_milestone"
+    }
+  }
+}

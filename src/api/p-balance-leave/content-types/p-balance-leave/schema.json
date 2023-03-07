@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "p_balance_leaves",
+  "info": {
+    "singularName": "p-balance-leave",
+    "pluralName": "p-balance-leaves",
+    "displayName": "PBalanceLeave"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "year": {
+      "required": true,
+      "type": "integer"
+    },
+    "defaultLeaves": {
+      "type": "integer",
+      "required": true,
+      "default": 30
+    },
+    "carryForwardLeaves": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "balanceLeaves": {
+      "type": "integer",
+      "required": true
+    },
+    "sickLeaves": {
+      "type": "integer",
+      "required": false,
+      "default": 0
+    },
+    "paidLeaves": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "unPaidLeaves": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "p_balance_leaves"
+    }
+  }
+}

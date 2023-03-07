@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "p_project_teams",
+  "info": {
+    "singularName": "p-project-team",
+    "pluralName": "p-project-teams",
+    "displayName": "PProjectTeam"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "rate": {
+      "type": "integer",
+      "required": true
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "p_project_teams"
+    },
+    "p_project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::p-project.p-project",
+      "inversedBy": "p_project_teams"
+    }
+  }
+}

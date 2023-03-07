@@ -1,0 +1,98 @@
+{
+  "kind": "collectionType",
+  "collectionName": "p_projects",
+  "info": {
+    "singularName": "p-project",
+    "pluralName": "p-projects",
+    "displayName": "PProject"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "effort": {
+      "type": "integer",
+      "required": true
+    },
+    "priority": {
+      "type": "enumeration",
+      "enum": [
+        "Critical",
+        "High",
+        "Moderate",
+        "Low"
+      ],
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "New",
+        "In-progress",
+        "Completed"
+      ],
+      "default": "New",
+      "required": true
+    },
+    "startDate": {
+      "type": "date",
+      "required": true
+    },
+    "estimatedEndDate": {
+      "type": "date",
+      "required": true
+    },
+    "actualEndDate": {
+      "type": "date"
+    },
+    "p_customer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::p-customer.p-customer",
+      "inversedBy": "p_projects"
+    },
+    "p_vendors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::p-vendor.p-vendor",
+      "inversedBy": "p_projects"
+    },
+    "documents": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "p_milestones": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::p-milestone.p-milestone",
+      "mappedBy": "p_project"
+    },
+    "p_tasks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::p-task.p-task",
+      "mappedBy": "p_project"
+    },
+    "p_project_teams": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::p-project-team.p-project-team",
+      "mappedBy": "p_project"
+    }
+  }
+}

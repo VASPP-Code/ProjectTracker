@@ -24,12 +24,6 @@
     "lve_daysTaken": {
       "type": "integer"
     },
-    "users_permissions_user": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "lve_info"
-    },
     "lve_reason": {
       "type": "enumeration",
       "enum": [
