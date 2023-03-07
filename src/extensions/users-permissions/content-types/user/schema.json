@@ -155,6 +155,10 @@
     },
     "zipcode": {
       "type": "integer"
+    },
+    "appPermission": {
+      "type": "json",
+      "required": true
     }
   }
 }
