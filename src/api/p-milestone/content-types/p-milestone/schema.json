@@ -4,7 +4,8 @@
   "info": {
     "singularName": "p-milestone",
     "pluralName": "p-milestones",
-    "displayName": "PMilestone"
+    "displayName": "PMilestone",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -36,6 +37,14 @@
       "relation": "oneToMany",
       "target": "api::p-task.p-task",
       "mappedBy": "p_milestone"
+    },
+    "startDate": {
+      "type": "date",
+      "required": true
+    },
+    "endDate": {
+      "type": "date",
+      "required": true
     }
   }
 }
