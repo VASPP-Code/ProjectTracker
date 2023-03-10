@@ -4,7 +4,8 @@
   "info": {
     "singularName": "p-task",
     "pluralName": "p-tasks",
-    "displayName": "PTask"
+    "displayName": "PTask",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -46,6 +47,14 @@
       "relation": "manyToOne",
       "target": "api::p-milestone.p-milestone",
       "inversedBy": "p_tasks"
+    },
+    "startDate": {
+      "type": "date",
+      "required": true
+    },
+    "endDate": {
+      "type": "date",
+      "required": true
     }
   }
 }
