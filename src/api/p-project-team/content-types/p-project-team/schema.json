@@ -4,7 +4,8 @@
   "info": {
     "singularName": "p-project-team",
     "pluralName": "p-project-teams",
-    "displayName": "PProjectTeam"
+    "displayName": "PProjectTeam",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -15,9 +16,9 @@
       "type": "integer",
       "required": true
     },
-    "users_permissions_user": {
+    "users_permissions_users": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
       "inversedBy": "p_project_teams"
     },

@@ -116,12 +116,6 @@
     "emergencyContName": {
       "type": "string"
     },
-    "p_project_teams": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::p-project-team.p-project-team",
-      "mappedBy": "users_permissions_user"
-    },
     "p_balance_leaves": {
       "type": "relation",
       "relation": "manyToMany",
@@ -159,6 +153,12 @@
     "appPermission": {
       "type": "json",
       "required": true
+    },
+    "p_project_teams": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::p-project-team.p-project-team",
+      "mappedBy": "users_permissions_users"
     }
   }
 }
