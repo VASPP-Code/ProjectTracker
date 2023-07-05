@@ -45,6 +45,18 @@
     "endDate": {
       "type": "date",
       "required": true
+    },
+    "m_time_entries": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::m-time-entry.m-time-entry",
+      "mappedBy": "p_milestones"
+    },
+    "p_time_estimations": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::p-time-estimation.p-time-estimation",
+      "mappedBy": "p_milestones"
     }
   }
 }

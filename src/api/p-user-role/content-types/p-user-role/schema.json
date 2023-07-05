@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "p_user_roles",
+  "info": {
+    "singularName": "p-user-role",
+    "pluralName": "p-user-roles",
+    "displayName": "PUserRoles"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PUserRole": {
+      "type": "enumeration",
+      "enum": [
+        "Project Manager",
+        "Architect",
+        "Senior Developer",
+        "Associate Developer",
+        "Tester"
+      ]
+    },
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "p_user_role"
+    }
+  }
+}

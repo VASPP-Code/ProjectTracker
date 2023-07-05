@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "p_time_estimations",
+  "info": {
+    "singularName": "p-time-estimation",
+    "pluralName": "p-time-estimations",
+    "displayName": "PTimeEstimation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "reason": {
+      "type": "richtext"
+    },
+    "start_date": {
+      "type": "date"
+    },
+    "estimated_endDate": {
+      "type": "date"
+    },
+    "actual_endDate": {
+      "type": "date"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Approved",
+        "Rejected",
+        "New"
+      ]
+    },
+    "p_milestones": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::p-milestone.p-milestone",
+      "inversedBy": "p_time_estimations"
+    },
+    "p_tasks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::p-task.p-task",
+      "mappedBy": "p_time_estimation"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "p_time_estimations"
+    }
+  }
+}

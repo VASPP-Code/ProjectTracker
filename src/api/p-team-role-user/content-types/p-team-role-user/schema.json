@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "p_team_role_users",
+  "info": {
+    "singularName": "p-team-role-user",
+    "pluralName": "p-team-role-users",
+    "displayName": "PTeamRoleUser",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "p_team_role_users"
+    },
+    "roleid": {
+      "type": "string"
+    },
+    "roleName": {
+      "type": "string"
+    }
+  }
+}

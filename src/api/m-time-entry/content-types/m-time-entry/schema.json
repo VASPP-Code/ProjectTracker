@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "m_time_entries",
+  "info": {
+    "singularName": "m-time-entry",
+    "pluralName": "m-time-entries",
+    "displayName": "MTimeEntry"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "m_time_entries"
+    },
+    "p_projects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::p-project.p-project",
+      "inversedBy": "m_time_entries"
+    },
+    "p_tasks": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::p-task.p-task",
+      "inversedBy": "m_time_entries"
+    },
+    "date": {
+      "type": "date"
+    },
+    "hours": {
+      "type": "integer"
+    },
+    "p_milestones": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::p-milestone.p-milestone",
+      "inversedBy": "m_time_entries"
+    }
+  }
+}

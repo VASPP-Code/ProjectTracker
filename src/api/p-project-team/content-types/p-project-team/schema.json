@@ -12,13 +12,9 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "rate": {
-      "type": "integer",
-      "required": true
-    },
-    "users_permissions_users": {
+    "users_permissions_user": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "p_project_teams"
     },
@@ -27,6 +23,16 @@
       "relation": "manyToOne",
       "target": "api::p-project.p-project",
       "inversedBy": "p_project_teams"
+    },
+    "p_team_role": {
+      "type": "enumeration",
+      "enum": [
+        "Project Manager",
+        "Senior Developer",
+        "Associate Developer",
+        "Architect",
+        "Tester"
+      ]
     }
   }
 }

@@ -98,29 +98,23 @@
     "department": {
       "type": "enumeration",
       "enum": [
-        "    Accounting",
-        "    Human Resources",
-        "    Marketing",
-        "    Sales",
-        "    Customer Service",
-        "    Information Technology (IT)",
-        "    Research and Development (R&D)",
-        "    Operations",
-        "    Legal",
-        "    Administration",
-        "    Finance",
-        "    Production."
+        "Accounting",
+        "Human Resources",
+        "Marketing",
+        "Sales",
+        "Customer Service",
+        "Information Technology (IT)",
+        "Research and Development (R&D)",
+        "Operations",
+        "Legal",
+        "Administration",
+        "Finance",
+        "Production"
       ],
       "required": true
     },
     "emergencyContName": {
       "type": "string"
-    },
-    "p_balance_leaves": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::p-balance-leave.p-balance-leave",
-      "mappedBy": "users_permissions_users"
     },
     "p_leaves": {
       "type": "relation",
@@ -150,14 +144,116 @@
     "zipcode": {
       "type": "integer"
     },
+    "m_time_entries": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::m-time-entry.m-time-entry",
+      "mappedBy": "users_permissions_users"
+    },
+    "p_tasks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::p-task.p-task",
+      "mappedBy": "users_permissions_user"
+    },
+    "p_bank_datum": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::usr-bankdata.usr-bankdata",
+      "inversedBy": "user"
+    },
+    "p_time_estimations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::p-time-estimation.p-time-estimation",
+      "mappedBy": "users_permissions_user"
+    },
+    "p_roles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::p-role.p-role",
+      "mappedBy": "user"
+    },
+    "p_attachment": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "p_project_teams": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::p-project-team.p-project-team",
+      "mappedBy": "users_permissions_user"
+    },
+    "p_projects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::p-project.p-project",
+      "inversedBy": "users_permissions_users"
+    },
+    "rate_card": {
+      "type": "biginteger"
+    },
+    "p_team_roles": {
+      "type": "enumeration",
+      "enum": [
+        "Project Manager",
+        "Senior Developer",
+        "Associate Developer",
+        "Architect",
+        "Tester"
+      ]
+    },
+    "skills": {
+      "type": "text"
+    },
+    "p_balance_leaves": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::p-balance-leave.p-balance-leave",
+      "mappedBy": "users_permissions_user"
+    },
+    "p_user_role": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::p-user-role.p-user-role",
+      "inversedBy": "users_permissions_users"
+    },
+    "certificates": {
+      "type": "text"
+    },
     "appPermission": {
       "type": "json",
       "required": true
     },
-    "p_project_teams": {
+    "bankName": {
+      "type": "string"
+    },
+    "IFCScode": {
+      "type": "string"
+    },
+    "bankAccNo": {
+      "type": "string"
+    },
+    "uan": {
+      "type": "string"
+    },
+    "p_team_role_users": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::p-project-team.p-project-team",
+      "target": "api::p-team-role-user.p-team-role-user",
+      "mappedBy": "users_permissions_users"
+    },
+    "p_appointments": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::p-appointment.p-appointment",
       "mappedBy": "users_permissions_users"
     }
   }

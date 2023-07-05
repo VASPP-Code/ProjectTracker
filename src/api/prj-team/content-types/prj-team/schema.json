@@ -15,24 +15,6 @@
     "prjTeam_ID": {
       "type": "uid"
     },
-    "prj_infos": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::prj-info.prj-info",
-      "mappedBy": "prj_teams"
-    },
-    "prj_mlsts": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::prj-mlst.prj-mlst",
-      "mappedBy": "prj_team"
-    },
-    "cus_infos": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::cus-info.cus-info",
-      "mappedBy": "prj_team"
-    },
     "vdr_info": {
       "type": "relation",
       "relation": "oneToOne",

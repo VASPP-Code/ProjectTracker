@@ -15,7 +15,7 @@
     "name": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "description": {
       "type": "text"
@@ -29,11 +29,12 @@
     "email": {
       "type": "email",
       "required": true,
-      "unique": true
+      "unique": false
     },
     "phone": {
       "type": "string",
-      "required": true
+      "required": true,
+      "minLength": 10
     },
     "address": {
       "type": "text",
@@ -83,14 +84,14 @@
     },
     "cpPhone": {
       "type": "string",
-      "required": true
+      "required": true,
+      "minLength": 10
     },
     "cpDesignation": {
       "type": "string"
     },
     "cpEmail": {
-      "type": "string",
-      "required": true
+      "type": "email"
     }
   }
 }

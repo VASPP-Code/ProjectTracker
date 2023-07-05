@@ -4,21 +4,14 @@
   "info": {
     "singularName": "p-leave",
     "pluralName": "p-leaves",
-    "displayName": "PLeave"
+    "displayName": "PLeave",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "startDate": {
-      "type": "date",
-      "required": true
-    },
-    "endDate": {
-      "type": "date",
-      "required": true
-    },
     "NoOfDays": {
       "type": "integer",
       "required": true
@@ -26,8 +19,11 @@
     "type": {
       "type": "enumeration",
       "enum": [
+        "Casual Leave",
         "Sick Leave",
-        "Paid Leave",
+        "Maternity Leave",
+        "Paternity Leave",
+        "Marriage Leave",
         "Unpaid Leave"
       ],
       "required": true
@@ -48,6 +44,44 @@
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "p_leaves"
+    },
+    "p_attachment": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "leave_balance": {
+      "type": "float"
+    },
+    "approvedBy": {
+      "type": "string"
+    },
+    "requestedBy": {
+      "type": "text"
+    },
+    "halfDay": {
+      "type": "boolean"
+    },
+    "startDate": {
+      "type": "string",
+      "required": true
+    },
+    "endDate": {
+      "type": "string",
+      "required": true
+    },
+    "reason": {
+      "type": "text"
+    },
+    "requestedById": {
+      "type": "integer",
+      "required": true
     }
   }
 }

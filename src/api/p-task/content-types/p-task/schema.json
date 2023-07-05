@@ -55,6 +55,53 @@
     "endDate": {
       "type": "date",
       "required": true
+    },
+    "m_time_entries": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::m-time-entry.m-time-entry",
+      "mappedBy": "p_tasks"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "p_tasks"
+    },
+    "p_time_estimation": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::p-time-estimation.p-time-estimation",
+      "inversedBy": "p_tasks"
+    },
+    "description": {
+      "type": "string"
+    },
+    "comments": {
+      "type": "richtext"
+    },
+    "p_approver_status": {
+      "type": "enumeration",
+      "enum": [
+        "Requested",
+        "Approved",
+        "Rejected"
+      ]
+    },
+    "p_task_reason": {
+      "type": "text"
+    },
+    "extended_end_date": {
+      "type": "date"
+    },
+    "p_sub_tasks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::p-sub-task.p-sub-task",
+      "mappedBy": "p_task"
+    },
+    "noOfDays": {
+      "type": "biginteger"
     }
   }
 }

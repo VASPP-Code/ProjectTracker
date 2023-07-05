@@ -68,29 +68,11 @@
         "audios"
       ]
     },
-    "prj_infos": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::prj-info.prj-info",
-      "mappedBy": "vdr_infos"
-    },
     "prj_team": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::prj-team.prj-team",
       "inversedBy": "vdr_info"
-    },
-    "cus_infos": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::cus-info.cus-info",
-      "mappedBy": "vdr_info"
-    },
-    "cus_locations": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::cus-location.cus-location",
-      "mappedBy": "vdr_info"
     }
   }
 }

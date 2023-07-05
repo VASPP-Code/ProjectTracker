@@ -49,7 +49,7 @@
     "region": {
       "type": "string"
     },
-    "documents": {
+    "p_attachment": {
       "type": "media",
       "multiple": true,
       "required": false,

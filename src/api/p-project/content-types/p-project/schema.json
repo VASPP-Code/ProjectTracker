@@ -4,7 +4,8 @@
   "info": {
     "singularName": "p-project",
     "pluralName": "p-projects",
-    "displayName": "PProject"
+    "displayName": "PProject",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,7 +22,7 @@
     },
     "effort": {
       "type": "integer",
-      "required": true
+      "required": false
     },
     "priority": {
       "type": "enumeration",
@@ -67,14 +68,15 @@
       "inversedBy": "p_projects"
     },
     "documents": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "p_milestones": {
       "type": "relation",
@@ -93,6 +95,34 @@
       "relation": "oneToMany",
       "target": "api::p-project-team.p-project-team",
       "mappedBy": "p_project"
+    },
+    "m_time_entries": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::m-time-entry.m-time-entry",
+      "mappedBy": "p_projects"
+    },
+    "progress": {
+      "type": "integer"
+    },
+    "actual_budget": {
+      "type": "biginteger"
+    },
+    "estimated_budget": {
+      "type": "biginteger"
+    },
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "p_projects"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Internal",
+        "External"
+      ]
     }
   }
 }

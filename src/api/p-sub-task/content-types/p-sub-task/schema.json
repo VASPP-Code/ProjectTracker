@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "p_sub_tasks",
+  "info": {
+    "singularName": "p-sub-task",
+    "pluralName": "p-sub-tasks",
+    "displayName": "PSubTask",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "p_task": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::p-task.p-task",
+      "inversedBy": "p_sub_tasks"
+    },
+    "name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "New",
+        "In-Progress",
+        "Completed"
+      ]
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "priority": {
+      "type": "enumeration",
+      "enum": [
+        "Critical",
+        "High",
+        "Moderate",
+        "Low"
+      ]
+    },
+    "extended_end_date": {
+      "type": "date"
+    },
+    "p_task_reason": {
+      "type": "text"
+    },
+    "description": {
+      "type": "string"
+    },
+    "p_approver_status": {
+      "type": "enumeration",
+      "enum": [
+        "Requested",
+        "Approved",
+        "Rejected"
+      ]
+    },
+    "noOfDays": {
+      "type": "biginteger"
+    }
+  }
+}
